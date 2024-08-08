@@ -1,43 +1,15 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ca-central-1:975050323571:task-definition/msa-cluster:1",
+    "taskDefinitionArn": "arn:aws:ecs:ca-central-1:975050323571:task-definition/msa-cluster-shop:1",
     "containerDefinitions": [
         {
-            "name": "msa-exam",
+            "name": "msa-exam-shop-container",
             "image": "975050323571.dkr.ecr.ca-central-1.amazonaws.com/sparta/msa_exam",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "msa-exam-19090-tcp",
-                    "containerPort": 19090,
-                    "hostPort": 19090,
-                    "protocol": "tcp",
-                    "appProtocol": "http"
-                },
-                {
-                    "name": "msa-exam-19091-tcp",
-                    "containerPort": 19091,
-                    "hostPort": 19091,
-                    "protocol": "tcp",
-                    "appProtocol": "http"
-                },
-                {
-                    "name": "msa-exam-19092-tcp",
-                    "containerPort": 19092,
-                    "hostPort": 19092,
-                    "protocol": "tcp",
-                    "appProtocol": "http"
-                },
-                {
-                    "name": "msa-exam-19093-tcp",
-                    "containerPort": 19093,
-                    "hostPort": 19093,
-                    "protocol": "tcp",
-                    "appProtocol": "http"
-                },
-                {
-                    "name": "msa-exam-19095-tcp",
-                    "containerPort": 19095,
-                    "hostPort": 19095,
+                    "name": "msa-exam-shop-container-8080-tcp",
+                    "containerPort": 8080,
+                    "hostPort": 8080,
                     "protocol": "tcp",
                     "appProtocol": "http"
                 }
@@ -51,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/msa-cluster",
+                    "awslogs-group": "/ecs/msa-cluster-shop",
                     "awslogs-create-group": "true",
                     "awslogs-region": "ca-central-1",
                     "awslogs-stream-prefix": "ecs"
@@ -61,7 +33,7 @@
             "systemControls": []
         }
     ],
-    "family": "msa-cluster",
+    "family": "msa-cluster-shop",
     "executionRoleArn": "arn:aws:iam::975050323571:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -107,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-08-04T16:17:24.333Z",
+    "registeredAt": "2024-08-08T01:01:37.656Z",
     "registeredBy": "arn:aws:iam::975050323571:root",
     "tags": []
 }
